@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .loading {
+                background-image: url("preloader.gif");
+                background-size: cover;
+                width: 40px!important;
+                height: 40px!important;;
+            }
+
+            #banner {
+                width: auto;
+                height: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img id="banner" class="loading" src="banner.php">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $("#banner").on("load", function(){
+                $(this).removeClass("loading");
+            });
+        </script>
+    </body>
+</html>
